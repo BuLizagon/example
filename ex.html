@@ -21,6 +21,8 @@
 <div id="input-form">   
 검색 : <input type="text" id="keyword">
 </div>
+<div class="container">
+    <div class="tab tab-1">
 <table id="table" border="1">
     <thead>
         <tr>
@@ -68,6 +70,8 @@
                 cell1.innerHTML = fname;
                 cell2.innerHTML = tel;
                 
+                //이벤트 새로 행만듬
+                selectedRowToInput();
 
             }
             
