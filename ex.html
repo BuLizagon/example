@@ -31,6 +31,21 @@
 
         <button onclick="addHTMLTableRow();">삽입</button>
         <button onclick="editHtmlTbleSelectedRow();">수정</button>
-        <button onclick="removeSelectedRow();">삭제</button>                
+        <button onclick="removeSelectedRow();">삭제</button>
+        
+  
+    <script type="text/javascript">
+            var rIndex,
+                table = document.getElementById("table");
+        function removeSelectedRow()
+            {
+                table.deleteRow(rIndex);
+                
+                document.getElementById("fname").value ="" ;
+                document.getElementById("tel").value ="" ;
+            }
+        
+            
+    </script>
 </body>
 </html>
