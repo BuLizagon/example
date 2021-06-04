@@ -45,7 +45,28 @@
 
         <button onclick="addHTMLTableRow();">삽입</button>
         <button onclick="editHtmlTbleSelectedRow();">수정</button>
-        <button onclick="removeSelectedRow();">삭제</button>
-    </div>                
+        <button onclick="removeSelectedRow();">삭제</button>                
+    </div>
+    <script type="text/javascript">
+            var rIndex,
+                table = document.getElementById("table");
+            
+            
+            function addHTMLTableRow()
+            {// 새로운 행열 생성
+                var newRow = table.insertRow(table.length),
+                    cell1 = newRow.insertCell(0),
+                    cell2 = newRow.insertCell(1),
+                    fname = document.getElementById("fname").value,
+                    tel = document.getElementById("tel").value;
+                
+                cell1.innerHTML = fname;
+                cell2.innerHTML = tel;
+                
+
+            }
+            
+    </script>
+>>>>>>> feature/add
 </body>
 </html>
