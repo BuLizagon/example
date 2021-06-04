@@ -57,10 +57,29 @@
     <script type="text/javascript">
             var rIndex,
                 table = document.getElementById("table");
+
+            //체크
+            function checkEmptyInput()
+            {
+                var isEmpty = false,
+                fname = document.getElementById("fname").value,
+                tel = document.getElementById("tel").value;
+
+                if(fname == ""){
+                    alert("이름을 입력하시오.");
+                    isEmpty = true;
+                }
+                else if(tel == ""){
+                    alert("전화번호를 입력하시오.");
+                    isEmpty = true;
+                }                
+                return isEmpty;
+            }
             
             
             function addHTMLTableRow()
             {// 새로운 행열 생성
+                if(!checkEmptyInput()){ 
                 var newRow = table.insertRow(table.length),
                     cell1 = newRow.insertCell(0),
                     cell2 = newRow.insertCell(1),
@@ -74,6 +93,7 @@
                 selectedRowToInput();
 
             }
+        }
             
     </script>      
     <script type="text/javascript">
@@ -103,10 +123,12 @@
                 var fname = document.getElementById("fname").value,
                     tel = document.getElementById("tel").value;
 
+                if(!checkEmptyInput()){
                 table.rows[rIndex].cells[0].innerHTML = fname;
                 table.rows[rIndex].cells[1].innerHTML = tel;
             
             }
+        }
         </script>
         
   
